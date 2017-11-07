@@ -1,10 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Friend Finder | Survey</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 </head>
 <body>
+<div class="container">
 
+<div class="jumbotron">
+<h1>Friend Finder</h1>
+</div>
+    <div class="row">
+        <div class="col-lg-6">
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+        </div>
+        <div class="col-lg-6">
+            <label for="email">Email:</label>
+            <input type="text" id="email">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q1">Select list:</label>
+                <select class="form-control" id="q1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q2">Select list:</label>
+                <select class="form-control" id="q2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q3">Select list:</label>
+                <select class="form-control" id="q3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q4">Select list:</label>
+                <select class="form-control" id="q4">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q5">Select list:</label>
+                <select class="form-control" id="q5">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q6">Select list:</label>
+                <select class="form-control" id="q6">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q7">Select list:</label>
+                <select class="form-control" id="q7">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q8">Select list:</label>
+                <select class="form-control" id="q8">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q9">Select list:</label>
+                <select class="form-control" id="q9">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="form-group">
+                <label for="q10">Select list:</label>
+                <select class="form-control" id="q10">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <button class="btn btn-primary" id="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script>
+
+    $("#submit").on("click", function(e){
+        e.preventDefault();
+        var newFriend = {
+            name: $("#name").val(),
+            email: $("#email").val(),
+            answers: [
+                $("#q1").val(),
+                $("#q2").val(),
+                $("#q3").val(),
+                $("#q4").val(),
+                $("#q5").val(),
+                $("#q6").val(),
+                $("#q7").val(),
+                $("#q8").val(),
+                $("#q9").val(),
+                $("#q10").val()
+            ]
+        };
+        console.log(newFriend);
+        $.post("/api/friends", newFriend, function(data){
+            if (data) {
+                console.log("friend added")
+            } else {
+                console.log("no new friend")
+            }
+        });
+    });
+</script>
 </body>
 </html>

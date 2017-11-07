@@ -1,3 +1,4 @@
+//base friends
 var friends = [
     {
         name: "mike",

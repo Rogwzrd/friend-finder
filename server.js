@@ -1,15 +1,19 @@
+//dependencies
 var express = require("express");
+var bodyParser = require("body-parser");
 var app = express();
 
-var apiRoutes = require("./routing/apiRoutes.js");
-var htmlRoutes = require("./routing/htmlRoutes.js");
+// Sets an initial port. We"ll use this later in our listener
+var port = process.env.PORT || 8080;
 
+// Sets up the Express app to handle data parsing
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-app.use(apiRoutes);
-app.use(htmlRoutes);
+//route files
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
 
-
-var port = 3000;
 
 //start the server
 app.listen(port, function () {
