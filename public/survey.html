@@ -165,35 +165,67 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-<script>
+<script type="text/javascript">
+    var friendsArray = [];
+    var friendsDiff = [];
 
-    $("#submit").on("click", function(e){
-        e.preventDefault();
-        var newFriend = {
-            name: $("#name").val(),
-            image: $("#image").val(),
-            answers: [
-                parseInt($("#q1").val()),
-                parseInt($("#q2").val()),
-                parseInt($("#q3").val()),
-                parseInt($("#q4").val()),
-                parseInt($("#q5").val()),
-                parseInt($("#q6").val()),
-                parseInt($("#q7").val()),
-                parseInt($("#q8").val()),
-                parseInt($("#q9").val()),
-                parseInt($("#q10").val())
-            ]
-        };
-        console.log(newFriend);
-        $.post("/api/friends", newFriend, function(data){
-            if (data) {
-                console.log("friend added")
-            } else {
-                console.log("no new friend")
+    $(document).ready(function(){
+        $.get("/api/friends", function (data) {
+            for (var i = 0; i < data.length; i++) {
+                friendsArray.push(data[i])
             }
         });
+
+        $("#submit").on("click", function(e) {
+            e.preventDefault();
+            var newFriend = {
+                name: $("#name").val(),
+                image: $("#image").val(),
+                answers: [
+                    parseInt($("#q1").val()),
+                    parseInt($("#q2").val()),
+                    parseInt($("#q3").val()),
+                    parseInt($("#q4").val()),
+                    parseInt($("#q5").val()),
+                    parseInt($("#q6").val()),
+                    parseInt($("#q7").val()),
+                    parseInt($("#q8").val()),
+                    parseInt($("#q9").val()),
+                    parseInt($("#q10").val())
+                ]
+            };
+            console.log(newFriend);
+
+            //compare answers
+            for (var i = 0; i < friendsArray.length; i++) {
+                var compObj ={
+                    name: friendsArray[i].name,
+                    diffVal: 0
+                };
+                for (var x = 0; x < friendsArray[i].answers.length; x++) {
+                    compObj.diffVal += Math.abs(newFriend.answers[x] - friendsArray[i].answers[x]);
+                }
+                friendsDiff.push(compObj)
+            }
+            var newBestFriend = friendsDiff[0];
+
+            for (var k = 0; k< friendsDiff.length; k++) {
+                if (newBestFriend.diffVal > friendsDiff[k].diffVal){
+                    newBestFriend = friendsDiff[k];
+                }
+            }
+            console.log(friendsDiff);
+            alert(`${newFriend.name} your new best friend is ${newBestFriend.name}!`);
+            $.post("/api/friends", newFriend, function(data){
+                if (data) {
+                    console.log("friend added")
+                } else {
+                    console.log("no new friend")
+                }
+            });
+        });
     });
+
 </script>
 </body>
 </html>
