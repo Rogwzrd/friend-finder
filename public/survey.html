@@ -7,156 +7,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 <div class="container">
-    <div class="jumbotron">
-        <h1>Friend Finder</h1>
+    <div class="jumbotron text-center">
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span><h1>Friend Finder</h1><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
     </div>
     <div class="row">
         <div class="col-lg-12">
             <form>
+                <div class="well">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" class="form-control">
+                    </div>
+                </div>
+                <div class="well">
+                    <div class="form-group">
+                        <label for="image">Image Link:</label>
+                        <input type="text" id="image" class="form-control">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="well well-lg">
+        <div class="row">
+            <div class="col-lg-12">
                 <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" class="form-control">
+                    <label for="q1"><strong>Question 1:</strong> Are you an introvert?</label>
+                    <select class="form-control" id="q1">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
                 </div>
-                <div class="form-gropu">
-                    <label for="image">Image Link:</label>
-                    <input type="text" id="image" class="form-control">
+            </div>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q2"><strong>Question 2:</strong> Are you an extrovert?</label>
+                    <select class="form-control" id="q2">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
                 </div>
-            </form>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q1"><strong>Question 1:</strong> Are you an introvert?</label>
-                <select class="form-control" id="q1">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q2"><strong>Question 2:</strong> Are you an extrovert?</label>
-                <select class="form-control" id="q2">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q3"><strong>Question 3:</strong> Do you prefer to go out on a the weekends?</label>
+                    <select class="form-control" id="q3">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q3"><strong>Question 3:</strong> Do you prefer to go out on a the weekends?</label>
-                <select class="form-control" id="q3">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q4"><strong>Question 4:</strong> Do you like spicy foods?</label>
+                    <select class="form-control" id="q4">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q4"><strong>Question 4:</strong> Do you like spicy foods?</label>
-                <select class="form-control" id="q4">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q5"><strong>Question 5:</strong> Would you like to spend a night out in the wilderness with no outside contact?</label>
+                    <select class="form-control" id="q5">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q5"><strong>Question 5:</strong> Would you like to spend a night out in the wilderness with no outside contact?</label>
-                <select class="form-control" id="q5">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q6"><strong>Question 6:</strong> Do you work well under pressure?</label>
+                    <select class="form-control" id="q6">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q6"><strong>Question 6:</strong> Do you work well under pressure?</label>
-                <select class="form-control" id="q6">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q7"><strong>Question 7:</strong> Your have a strong appreciation for jazz music?</label>
+                    <select class="form-control" id="q7">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q7"><strong>Question 7:</strong> Your have a strong appreciation for jazz music?</label>
-                <select class="form-control" id="q7">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q8"><strong>Question 8:</strong> I enjoy being busy?</label>
+                    <select class="form-control" id="q8">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q8"><strong>Question 8:</strong> I enjoy being busy?</label>
-                <select class="form-control" id="q8">
-                    <option value="1">1 (strongly disagree</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q9"><strong>Question 9:</strong> I am easily angered by others?</label>
+                    <select class="form-control" id="q9">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q9"><strong>Question 9:</strong> I am easily angered by others?</label>
-                <select class="form-control" id="q9">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <div class="form-group">
+                    <label for="q10"><strong>Question 10:</strong> Would you rather ride a bike instead of driving a car</label>
+                    <select class="form-control" id="q10">
+                        <option value="1">1 (strongly disagree)</option>
+                        <option value="2">2 (disagree)</option>
+                        <option value="3">3 (neutral)</option>
+                        <option value="4">4 (agree)</option>
+                        <option value="5">5 (strongly agree)</option>
+                    </select>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <div class="form-group">
-                <label for="q10"><strong>Question 10:</strong> Would you rather ride a bike instead of driving a car</label>
-                <select class="form-control" id="q10">
-                    <option value="1">1 (strongly disagree)</option>
-                    <option value="2">2 (disagree)</option>
-                    <option value="3">3 (neutral)</option>
-                    <option value="4">4 (agree)</option>
-                    <option value="5">5 (strongly agree)</option>
-                </select>
+            <div class="col-lg-12">
+                <form>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="submit" data-toggle="modal" data-target="#myModal">Submit</button>
+                </form>
             </div>
-        </div>
-        <div class="col-lg-12">
-            <form>
-            <button class="btn btn-primary btn-lg" id="submit">Submit</button>
-            </form>
         </div>
     </div>
 </div>
 
+<!--modal-->
+<div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Results</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <p>You have been connected with <span id="newFriendName">new best friend</span></p>
+                        <img id="newFriendImage" class="img-thumbnail img-fluid">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script
@@ -176,8 +206,11 @@
             }
         });
 
+        //this function starts when you click the submit button
         $("#submit").on("click", function(e) {
             e.preventDefault();
+
+            //take the value of the inputs and the questionnaire
             var newFriend = {
                 name: $("#name").val(),
                 image: $("#image").val(),
@@ -194,28 +227,41 @@
                     parseInt($("#q10").val())
                 ]
             };
-            console.log(newFriend);
 
-            //compare answers
+            //create an arry of all friends and compare your answers
             for (var i = 0; i < friendsArray.length; i++) {
+                //object to represent each possible friend and their difference value
                 var compObj ={
                     name: friendsArray[i].name,
+                    image: "link.jpg",
                     diffVal: 0
                 };
+
+                //compare each question to  your anwers and push the abolute value to the comparison object
                 for (var x = 0; x < friendsArray[i].answers.length; x++) {
                     compObj.diffVal += Math.abs(newFriend.answers[x] - friendsArray[i].answers[x]);
                 }
+                //add the new comparision object per each friend
+                compObj.image = friendsArray[i].image;
                 friendsDiff.push(compObj)
             }
+            //the base new best friend is the first in the list
             var newBestFriend = friendsDiff[0];
 
+            //for each friend compare who has lowest comparison value
             for (var k = 0; k< friendsDiff.length; k++) {
+                //if they have the lowest difference they become the new best friend
                 if (newBestFriend.diffVal > friendsDiff[k].diffVal){
                     newBestFriend = friendsDiff[k];
                 }
             }
+
             console.log(friendsDiff);
-            alert(`${newFriend.name} your new best friend is ${newBestFriend.name}!`);
+
+            //alert the new match on a modal
+            $("#newFriendName").text(newBestFriend.name);
+            $("#newFriendImage").attr("src", newBestFriend.image);
+
             $.post("/api/friends", newFriend, function(data){
                 if (data) {
                     console.log("friend added")
