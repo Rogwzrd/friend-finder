@@ -10,6 +10,8 @@ var port = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use("/", express.static("public"));
+
 //route files
 require("./routing/apiRoutes")(app);
 require("./routing/htmlRoutes")(app);
