@@ -57,7 +57,7 @@ var friends = [
         ]
     },{
         name: "Gene",
-        image: "link.com",
+        image: "https://scontent.fatl1-2.fna.fbcdn.net/v/t1.0-9/12809757_4878427674791_3265377628280522257_n.jpg?oh=8cbf9f33e99ba27ffb33f7251b38a7db&oe=5A648D98",
         answers: [
             "5",
             "2",
@@ -87,7 +87,7 @@ var friends = [
         ]
     },{
         "name": "Musa",
-        "image": "musa",
+        "image": "https://media-exp1.licdn.com/media/AAIA_wDGAAAAAQAAAAAAAA1oAAAAJDU0MTNlMzQyLTAxZGItNGM2ZS05OGY1LTVmZTJiYTQ5ZmZmYg.jpg",
         "answers": [
             "3",
             "2",
